@@ -97,7 +97,7 @@
                     success : function(result){
 		if ($('#lang option:selected').text()=="Python")
 		{
-			if (result.hasOwnProperty('result'))
+			if (result.hasOwnProperty('output'))
 			{
                 		outputScreen.setValue(result["output"]);
 			}

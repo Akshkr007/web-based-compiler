@@ -3,6 +3,7 @@ It is an implementation of compilex module. It provides an interface to run your
 
 ## Installation instruction
 ```bash
+sudo apt install nodejs npm  # If not already installed
 git clone https://github.com/marvellouschandan/web-based-compiler
 cd web-based-compiler
 npm install  # To install the required dependencies

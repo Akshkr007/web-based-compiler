@@ -97,7 +97,14 @@
                     success : function(result){
 		if ($('#lang option:selected').text()=="Python")
 		{
-                	outputScreen.setValue(result["output"]);
+			if (result.hasOwnProperty('result'))
+			{
+                		outputScreen.setValue(result["output"]);
+			}
+			else
+			{
+                		outputScreen.setValue(result["error"]);
+			}
                 	//outputScreen.setValue(JSON.stringify(result));
 		}
 		else
@@ -135,17 +142,6 @@ int main()
                 }
                 });
                 
-                /*if (document.addEventListener) {
-                document.addEventListener('open', function(e) {
-                alert("You've tried to open context menu"); //here you draw your own menu
-                e.preventDefault();
-                }, false);
-                } else {
-                document.attachEvent('oncontextmenu', function() {
-                alert("You've tried to open context menu");
-                window.event.returnValue = false;
-                });
-                }*/
             </script>
         </form>
     </body>
